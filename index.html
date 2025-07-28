@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Sorpresa Para Ti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="inicio">
+        <h1>He creado esto solo para ti</h1>
+        <p>Haz clic para comenzar nuestro viaje...</p>
+        <button id="startButton">Comenzar</button>
+    </div>
+
+    <main id="contenido" class="hidden">
+
+        <section class="timeline">
+            <h2>Un Viaje Por Nuestros Recuerdos</h2>
+            <div class="memory">
+                <h3>Nuestra primera foto</h3>
+                <img src="foto1.jpg" alt="Nuestra primera foto">
+                <p>"Aquí comenzó todo. El día que mi vida se iluminó."</p>
+            </div>
+            <div class="memory">
+                <h3>Nuestro primer viaje juntos</h3>
+                <img src="foto2.jpg" alt="Nuestro primer viaje juntos">
+                <p>"La mejor compañera de aventuras que podría existir."</p>
+            </div>
+            <div class="memory">
+                <h3>Un momento divertido</h3>
+                <img src="foto3.jpg" alt="Un momento divertido">
+                <p>"Porque cada día a tu lado es una razón para sonreír."</p>
+            </div>
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- ===== SECCIÓN DEL JUEGO (QUIZ) - ACTUALIZADA Y CORREGIDA ===== -->
+        <!-- ========================================================== -->
+        <section id="juego" class="quiz-container">
+            <h2>Un pequeño juego para la mejor novia</h2>
+            <p>Responde correctamente para desbloquear el siguiente capítulo.</p>
+            
+            <!-- Se cambió <form> por <div> y se agregaron los párrafos de feedback -->
+            <div id="quiz">
+                <div class="question">
+                    <p>1. ¿Dónde nos dimos nuestro primer beso?</p>
+                    <input type="text" id="q1" placeholder="Tu respuesta aquí...">
+                    <!-- Elemento para mostrar "Correcto" o "Incorrecto" -->
+                    <p class="feedback" id="feedback-q1"></p>
+                </div>
+                <div class="question">
+                    <p>2. ¿Cuál es mi apodo favorito para ti?</p>
+                    <input type="text" id="q2" placeholder="Tu respuesta aquí...">
+                    <!-- Elemento para mostrar "Correcto" o "Incorrecto" -->
+                    <p class="feedback" id="feedback-q2"></p>
+                </div>
+                <!-- Se cambió el botón para que coincida con el script.js -->
+                <button id="checkBtn">Revisar respuestas</button>
+            </div>
+        </section>
+
+        <section id="propuesta" class="hidden">
+            <h2>Después de recordar nuestro pasado y disfrutar nuestro presente...</h2>
+            <h1>Solo hay una cosa que quiero para nuestro futuro...</h1>
+            <p class="pregunta-final">¿Quieres seguir escribiendo esta historia conmigo y continuar siendo mi novia?</p>
+            <div class="botones">
+                <button id="yesBtn">¡Sí, acepto seguir siendo tuya!</button>
+                <button id="noBtn">No</button>
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="background-music" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

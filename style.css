@@ -1,0 +1,221 @@
+/* Importar una fuente bonita desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f9ecee, #4189fd); /* Fondo degradado romántico */
+    color: #444;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+.hidden {
+    display: none;
+}
+
+#inicio {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#startButton {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #fff;
+    color: #9f9cee;
+}
+
+main {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #4933d6;
+}
+
+.timeline {
+    margin-bottom: 50px;
+}
+
+.memory {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.memory img {
+    max-width: 100%;
+    height: auto; /* Importante para la adaptabilidad de imágenes */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.memory p {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+/* Estilo para los nuevos títulos de las imágenes */
+.memory h3 {
+    font-family: 'Dancing Script', cursive; /* Usamos la misma fuente bonita */
+    font-size: 1.8em; /* Un buen tamaño para el título */
+    color: #463ac9; /* Un color que combine */
+    margin-bottom: 15px; /* Espacio entre el título y la foto */
+    font-weight: 700;
+}
+
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.question input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quiz-container button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #3333d6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+#propuesta {
+    margin-top: 50px;
+    animation: fadeIn 2s;
+}
+
+.pregunta-final {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.botones {
+    margin-top: 30px;
+    position: relative; /* Lo mantenemos para que el botón "No" sepa dónde moverse */
+    height: 100px; /* Espacio para que el botón "No" se mueva */
+    display: flex; /* ¡La magia de Flexbox comienza aquí! */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea los botones verticalmente */
+    gap: 25px; /* Crea un espacio de 25px entre los botones */
+}
+
+#yesBtn {
+    padding: 20px 40px;
+    font-size: 1.5em;
+    background-color: #4CAF50; /* Verde de "Sí" */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#yesBtn:hover {
+    transform: scale(1.1);
+}
+
+#noBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    /* Ya no necesita posición inicial, Flexbox se encarga */
+    transition: all 0.3s ease;
+}
+
+/* ========================================= */
+/* ===== ESTILOS PARA DISPOSITIVOS MÓVILES ===== */
+/* ========================================= */
+@media (max-width: 680px) {
+
+    body {
+        padding: 10px;
+    }
+
+    #inicio h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    .memory,
+    .quiz-container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    .pregunta-final {
+        font-size: 1.2em;
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column; /* Apila los botones verticalmente */
+        align-items: center;
+        height: auto; /* Altura automática para que quepan ambos */
+        gap: 20px; /* Espacio entre los botones */
+    }
+
+    #yesBtn {
+        font-size: 1.2em;
+        padding: 15px 30px;
+    }
+
+    #noBtn {
+        position: relative; /* Desactivamos el escape del botón en móviles */
+        left: auto;
+        top: auto;
+        bottom: auto;
+        right: auto;
+    }
+}
