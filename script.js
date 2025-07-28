@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkBtn.addEventListener('click', () => {
         // ---- ¡¡¡AQUÍ ESTÁN TUS RESPUESTAS!!! ----
         const respuestaCorrecta1 = "en tu pieza"; 
-        const respuestaCorrecta2 = "carton mojado";
+        const respuestaCorrecta2 = "cuajada de mil";
 
         const respuestaUsuario1 = document.getElementById('q1').value.trim().toLowerCase();
         const respuestaUsuario2 = document.getElementById('q2').value.trim().toLowerCase();
